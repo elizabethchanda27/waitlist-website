@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynthoCode Product</title>
+
+    <!-- Preload -->
+    <link rel="preload" href="https://my.spline.design/homepageswefellowshipogdesigncopy-91d47aab8781bc0569253a44bf15b6f7/" as="document">
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBbkIUZwItTR5OmTMJPZwkcKAiu62BKg2s",
+        authDomain: "waitlist-website-6b95a.firebaseapp.com",
+        projectId: "waitlist-website-6b95a",
+        storageBucket: "waitlist-website-6b95a.appspot.com",
+        messagingSenderId: "414717254432",
+        appId: "1:414717254432:web:d9d17caf90b16270d91545",
+        measurementId: "G-385N2QJ30X"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('waitlist-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          const firstName = event.target.first_name.value;
+          const lastName = event.target.last_name.value;
+          const email = event.target.email.value;
+
+          // Add form data to Firestore
+          db.collection('submissions').add({
+            firstName,
+            lastName,
+            email
+          }).then(() => {
+            // Show confirmation message
+            document.getElementById('confirmation-message').innerText = 'Submitted!';
+            document.getElementById('confirmation-message').style.color = 'green';
+            // Trigger confetti animation
+            confetti({
+              particleCount: 100,
+              spread: 70,
+              origin: { y: 0.6 }
+            });
+          }).catch(error => {
+            console.error('Error adding document: ', error);
+          });
+        });
+      });
+    </script>
+</head>
+<body>
+    <!-- Main Container -->
+    <main>
+        <!-- Spline Design -->
+        <iframe id="spline-design" src="https://my.spline.design/homepageswefellowshipogdesigncopy-91d47aab8781bc0569253a44bf15b6f7/" frameborder="0"></iframe>
+
+        <!-- Company Logo -->
+        <div id="company-logo">SynthoCode</div>
+
+        <!-- Typing Effect Container -->
+        <div id="typing-container">
+            <div id="typing-text"></div>
+            <div id="subtext">Get more time. Join our waitlist to get access to SynthoTime Smartpilot!</div>
+        </div>
+
+        <!-- Separator -->
+        <div id="separator"></div>
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <form id="waitlist-form">
+                <div class="input-group">
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                    <input type="text" name="last_name" placeholder="Last Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <button type="submit">Join</button>
+            </form>
+            <div id="confirmation-message"></div>
+        </div>
+
+        <!-- Animation Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+        <script type="module" src="script.js" defer></script>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,212 @@
+/* General Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Container and Layout */
+main {
+    display: grid;
+    align-items: center;
+    padding: 4rem;
+    min-height: 100vh;
+    background: linear-gradient(#eff0f3, #efe0e3);
+    position: relative; /* Ensure absolute positioning works */
+}
+
+/* Container for aligning elements */
+.container {
+    display: grid;
+    justify-items: start;
+    gap: 2rem;
+}
+
+/* Spline Design */
+#spline-design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 1;
+}
+
+/* Typing Effect Container */
+#typing-container {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    text-align: left;
+    color: #333;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.5s ease-in-out;
+    max-width: 80%; /* Adjust to ensure proper scaling */
+    transform: translateY(-50%);
+}
+
+/* Typing Text */
+#typing-text {
+    font-size: 5em;
+    font-weight: bold;
+    white-space: nowrap; /* Ensure text stays on one line */
+    border-right: 2px solid black; /* Cursor effect */
+    padding-right: 10px;
+    animation: blink-caret 0.75s step-end infinite;
+    display: inline-block;
+}
+
+/* Subtext */
+#subtext {
+    font-size: 1.5em;
+    color: #666;
+    margin-top: 0.5em;
+    text-align: left; /* Align with the typing text */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+/* Spacer */
+#spacer {
+    height: 3rem; /* Space between subtext and form */
+    width: 100%;
+    background: transparent;
+}
+
+/* Typewriter Effect */
+[data-typewriter] {
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 4.5rem;
+    color: #d9376e;
+    height: 6rem;
+    border-right: .8rem solid transparent;
+    padding: .6rem;
+}
+
+[data-typewriter]:not(.typing) {
+    animation: blink-caret 1.1s step-end infinite;
+}
+
+/* Keyframes for Cursor Blink Animation */
+@keyframes blink-caret {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+/* Form Container */
+.form-container {
+    position: absolute;
+    bottom: 50%; /* Move form container up from the bottom */
+    left: 7.5%; /* Align with the left of the page */
+    transform: translateX(0); /* No need to center, already aligned */
+    z-index: 3;
+    width: 80%;
+    max-width: 800px;
+    opacity: 0; /* Initially hidden, revealed later by JavaScript */
+    background-color: rgba(255, 255, 255, 0.9); /* Visible background */
+    transition: opacity 0.5s ease-in-out;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Form Style */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Input Group Style */
+.input-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows inputs to wrap if needed */
+}
+
+/* Input Fields */
+.input-group input {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 150px; /* Ensure inputs don't get too small */
+}
+
+/* Submit Button */
+.form-container button {
+    padding: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #89CFF0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #7393B3;
+}
+
+/* Styles for confirmation message */
+#confirmation-message {
+    display: none; /* Initially hidden */
+    font-size: 1.5rem;
+    color: #28a745;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Design for Logo */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+#company-logo {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 24px; 
+    font-weight: bold;
+    color: hsl(209, 75%, 54%); 
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000; /* Ensures it stays on top */
+    font-style: italic;
+}
+
+
+/* Additional Styles */
+h1 {
+    font-family: "Playfair Display";
+    font-size: 4rem;
+    margin-top: 3em;
+    margin-bottom: .3em;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+h1, p {
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}

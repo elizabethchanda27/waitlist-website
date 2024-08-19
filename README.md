@@ -1,4 +1,4 @@
-# waitlist-website
+# waitlist-website 
 
 # Step 1
 Make Spline Design or use the one I have designed
@@ -14,3 +14,9 @@ Implement the Submission Button
 
 # Step 5
 Use Firebase for Cloud Firestore for Backend of Website
+
+# Step 6
+Test out the website to see if the backend is connected correctly
+
+# Step 7
+Import into Github

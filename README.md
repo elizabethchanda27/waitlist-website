@@ -1,7 +1,7 @@
 # waitlist-website
 
 # Step 1
-##Make Spline Design or use the one I have designed
+Make Spline Design or use the one I have designed
 
 # Step 2
 Import Spline Design into website

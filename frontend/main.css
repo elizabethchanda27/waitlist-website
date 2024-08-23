@@ -221,7 +221,7 @@ main {
 
     /* Adjust the form container for small screens */
     .form-container {
-        bottom: 20%; /* Move the form up */
+        bottom: 50%; /* Move the form up */
         left: 5%; /* Adjust positioning */
         width: 90%; /* Make the form container take up more space on smaller screens */
     }

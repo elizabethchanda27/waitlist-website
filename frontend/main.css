@@ -38,11 +38,10 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw; /* 100% of the viewport width */
-    height: 100vh; /* 100% of the viewport height */
+    width: 100%;
+    height: 100%;
     border: none;
     z-index: 1;
-    object-fit: cover; /* Ensures the design covers the entire area without distortion */
 }
 
 /* Typing Effect Container */
@@ -57,7 +56,6 @@ main {
     transition: opacity 0.5s ease-in-out;
     max-width: 80%; /* Adjust to ensure proper scaling */
     transform: translateY(-50%);
-    font-size: 3vw; /* Adjust font size based on viewport width */
 }
 
 /* Typing Text */
@@ -193,7 +191,6 @@ main {
     font-style: italic;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     /* Adjust the main container padding for small screens */
     main {
@@ -202,10 +199,10 @@ main {
 
     /* Adjust the typing effect container for smaller screens */
     #typing-container {
-        top: 15%; /* Move the text up for better visibility */
+        top: 10%; /* Move the text up for better visibility */
         left: 5%; /* Adjust left positioning */
         max-width: 90%; /* Allow more space on small screens */
-        font-size: 4vw; /* Increase font size for better readability */
+        font-size: 1.5em; /* Decrease font size */
     }
 
     /* Adjust the typing text font size for smaller screens */
@@ -221,7 +218,7 @@ main {
 
     /* Adjust the form container for small screens */
     .form-container {
-        bottom: 100%; /* Move the form up */
+        bottom: 20%; /* Move the form up */
         left: 5%; /* Adjust positioning */
         width: 90%; /* Make the form container take up more space on smaller screens */
     }
@@ -238,7 +235,7 @@ main {
 
     /* Adjust the iframe to be more suitable for mobile screens */
     #spline-design {
-        height: 100vh; /* Ensure it still covers the full height */
+        height: 300px; /* Reduce the height of the iframe */
     }
 
     /* Adjust the company logo size for smaller screens */
@@ -255,7 +252,7 @@ main {
 /* Media Query for screens smaller than 480px (very small phones) */
 @media (max-width: 480px) {
     #typing-text {
-        font-size: 5vw; /* Further reduce font size */
+        font-size: 2em; /* Further reduce font size */
     }
 
     .form-container {
@@ -263,9 +260,10 @@ main {
     }
 
     #spline-design {
-        height: 100vh; /* Ensure full height coverage */
+        height: 200px; /* Further reduce the height of the iframe */
     }
 }
+
 
 /* Additional Styles */
 h1 {

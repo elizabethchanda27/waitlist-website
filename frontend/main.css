@@ -263,7 +263,7 @@ main {
         left: 2%;
         bottom: 45%; /* Move the form up */
         width: 80%; /* Increase width to fit smaller screens */
-        height: 10vh; /* Make the form container 40% of the screen height on phone screens */
+        height: 45vh; /* Make the form container 40% of the screen height on phone screens */
         padding: 20px; /* Adjust the padding to make the form container more compact */
     }
 

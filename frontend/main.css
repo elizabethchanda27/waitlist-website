@@ -42,7 +42,8 @@ main {
     height: 100vh; /* 100% of the viewport height */
     border: none;
     z-index: 1;
-    object-fit: cover; /* Ensure the design covers the entire area without distortion */
+    object-fit: contain; /* Ensure the design covers the entire area without distortion */
+    object-position: center; /* Center the image horizontally and vertically */
 }
 
 
@@ -265,9 +266,10 @@ main {
     }
 
     #spline-design {
-        object-fit: cover;
+        object-fit: contain;
         object-position: 50% 50%; /* Center the image horizontally and vertically */
         height: 100vh; /* Ensure full height coverage */
+        transform: scale(0.5); /* Scale the image to 50% of its original size */
     }
 
     #subtext {

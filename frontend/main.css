@@ -272,7 +272,7 @@ main {
         transform: scale(1); /* Scale the image to 50% of its original size */
         width: 390vw;
         left: -180vw;
-        transform: translateY(-5vh); /* Move the element up by 20vh */
+        transform: translateY(-10vh); /* Move the element up by 20vh */
     }
 
     #subtext {

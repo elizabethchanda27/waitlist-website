@@ -255,10 +255,11 @@ main {
 /* Media Query for screens smaller than 480px (very small phones) */
 @media (max-width: 480px) {
     #typing-text {
-        font-size: vw; /* Further reduce font size */
+        font-size: 3vw; /* Further reduce font size */
     }
 
     .form-container {
+        left: 2%;
         bottom: 30%; /* Move the form up */
         width: 95%; /* Increase width to fit smaller screens */
     }

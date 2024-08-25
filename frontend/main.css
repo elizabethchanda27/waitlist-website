@@ -62,7 +62,7 @@ main {
 
 /* Typing Text */
 #typing-text {
-    font-size: 2em; /* Adjust font size */
+    font-size: 3em; /* Adjust font size */
     font-weight: bold;
     white-space: nowrap; /* Ensure text stays on one line */
     border-right: 2px solid black; /* Cursor effect */
@@ -117,7 +117,7 @@ main {
 /* Form Container */
 .form-container {
     position: absolute;
-    bottom: 50%; /* Move form container up from the bottom */
+    bottom: 40%; /* Move form container up from the bottom */
     left: 7.5%; /* Align with the left of the page */
     transform: translateX(0); /* No need to center, already aligned */
     z-index: 3;

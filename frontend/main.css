@@ -256,7 +256,7 @@ main {
 /* Media Query for screens smaller than 480px (very small phones) */
 @media (max-width: 480px) {
     #typing-text {
-        font-size: 7vw; /* Further reduce font size */
+        font-size: 6vw; /* Further reduce font size */
     }
 
     .form-container {
@@ -269,9 +269,10 @@ main {
         object-fit: contain;
         object-position: 50% 50%; /* Center the image horizontally and vertically */
         height: 100vh; /* Ensure full height coverage */
-        transform: scale(.90); /* Scale the image to 50% of its original size */
+        transform: scale(.5); /* Scale the image to 50% of its original size */
         width: 390vw;
         left: -180vw;
+        transform: translateY(-20vh); /* Move the element up by 20vh */
     }
 
     #subtext {

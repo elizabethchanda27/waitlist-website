@@ -118,7 +118,7 @@ main {
 .form-container {
     position: absolute;
     bottom: 50%; /* Move form container up from the bottom */
-    left: 7.5%; /* Align with the left of the page */
+    left: 5%; /* Align with the left of the page */
     transform: translateX(0); /* No need to center, already aligned */
     z-index: 3;
     width: 80%;
@@ -129,6 +129,7 @@ main {
     padding: 2rem;
     border-radius: 8px;
 }
+
 
 /* Form Style */
 .form-container form {

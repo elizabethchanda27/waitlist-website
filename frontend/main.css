@@ -194,7 +194,7 @@ main {
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     /* Adjust the main container padding for small screens */
     main {
         padding: 2rem; /* Reduce padding to fit smaller screens */

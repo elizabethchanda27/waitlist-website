@@ -260,7 +260,7 @@ main {
 
     .form-container {
         left: 2%;
-        bottom: 30%; /* Move the form up */
+        bottom: 40%; /* Move the form up */
         width: 95%; /* Increase width to fit smaller screens */
     }
 

@@ -253,7 +253,7 @@ main {
 }
 
 /* Media Query for screens smaller than 480px (very small phones) */
-@media (max-width: 350px) {
+@media (max-width: 700px) {
     #typing-text {
         font-size: 5vw; /* Further reduce font size */
     }

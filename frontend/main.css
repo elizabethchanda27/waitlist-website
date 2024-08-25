@@ -62,7 +62,7 @@ main {
 
 /* Typing Text */
 #typing-text {
-    font-size: 3em; /* Adjust font size */
+    font-size: 1.5em; /* Adjust font size */
     font-weight: bold;
     white-space: nowrap; /* Ensure text stays on one line */
     border-right: 2px solid black; /* Cursor effect */
@@ -73,7 +73,7 @@ main {
 
 /* Subtext */
 #subtext {
-    font-size: 1.5em; /* Adjust font size */
+    font-size: .5em; /* Adjust font size */
     color: #666;
     margin-top: 0.5em;
     text-align: left; /* Align with the typing text */
@@ -117,8 +117,8 @@ main {
 /* Form Container */
 .form-container {
     position: absolute;
-    bottom: 40%; /* Move form container up from the bottom */
-    left: 7.5%; /* Align with the left of the page */
+    bottom: 47%; /* Move form container up from the bottom */
+    left: 8%; /* Align with the left of the page */
     transform: translateX(0); /* No need to center, already aligned */
     z-index: 3;
     width: 80%;
@@ -191,6 +191,80 @@ main {
     right: 20px;
     z-index: 1000; /* Ensures it stays on top */
     font-style: italic;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust the main container padding for small screens */
+    main {
+        padding: 2rem; /* Reduce padding to fit smaller screens */
+    }
+
+    /* Adjust the typing effect container for smaller screens */
+    #typing-container {
+        top: 15%; /* Move the text up for better visibility */
+        left: 5%; /* Adjust left positioning */
+        max-width: 90%; /* Allow more space on small screens */
+        font-size: 4vw; /* Increase font size for better readability */
+    }
+
+    /* Adjust the typing text font size for smaller screens */
+    #typing-text {
+        font-size: 3em; /* Reduce font size for smaller screens */
+    }
+
+    /* Adjust the subtext font size and padding */
+    #subtext {
+        font-size: 1em; /* Reduce font size for smaller screens */
+        padding: 5px; /* Add padding for better readability */
+    }
+
+    /* Adjust the form container for small screens */
+    .form-container {
+        bottom: 10%; /* Move the form up */
+        left: 5%; /* Adjust positioning */
+        width: 90%; /* Make the form container take up more space on smaller screens */
+    }
+
+    /* Stack input fields vertically on small screens */
+    .input-group {
+        flex-direction: column;
+        gap: 0.5rem; /* Reduce gap between inputs */
+    }
+
+    .input-group input {
+        width: 100%; /* Make inputs full-width on smaller screens */
+    }
+
+    /* Adjust the iframe to be more suitable for mobile screens */
+    #spline-design {
+        height: 100vh; /* Ensure it still covers the full height */
+    }
+
+    /* Adjust the company logo size for smaller screens */
+    #company-logo {
+        font-size: 1.5em; /* Smaller font size for the logo */
+    }
+
+    /* Adjust the spacer for smaller screens */
+    #spacer {
+        height: 1.5rem; /* Reduce height */
+    }
+}
+
+/* Media Query for screens smaller than 480px (very small phones) */
+@media (max-width: 480px) {
+    #typing-text {
+        font-size: 5vw; /* Further reduce font size */
+    }
+
+    .form-container {
+        bottom: 10%; /* Move the form up */
+    }
+
+    #spline-design {
+        height: 100vh; /* Ensure full height coverage */
+    }
 }
 
 /* Additional Styles */

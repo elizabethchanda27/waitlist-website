@@ -260,7 +260,7 @@ main {
     }
 
     .form-container {
-        bottom: 55%; /* Move the form up */
+        bottom: 60%; /* Move the form up */
         height: 20vh; /* Make the form container 40% of the screen height on phone screens */
         padding: 10 px
     }

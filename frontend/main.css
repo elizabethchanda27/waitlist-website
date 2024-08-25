@@ -42,7 +42,7 @@ main {
     height: 100vh; /* 100% of the viewport height */
     border: none;
     z-index: 1;
-    object-fit: cover; /* Ensure the design covers the entire area without distortion */
+    object-fit: contain; /* Ensure the design covers the entire area without distortion */
 }
 
 
@@ -255,7 +255,7 @@ main {
 }
 
 /* Media Query for screens smaller than 480px (very small phones) */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     #typing-text {
         font-size: 5vw; /* Further reduce font size */
     }

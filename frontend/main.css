@@ -42,8 +42,7 @@ main {
     height: 100vh; /* 100% of the viewport height */
     border: none;
     z-index: 1;
-    object-fit: contain; /* Ensure the entire design is visible */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for scaling */
+    object-fit: cover; /* Ensure the design covers the entire area without distortion */
 }
 
 
@@ -266,7 +265,6 @@ main {
     }
 
     #spline-design {
-        width: 100vw;
         height: 100vh; /* Ensure full height coverage */
     }
 

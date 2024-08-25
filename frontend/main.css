@@ -20,7 +20,7 @@ body, html {
 main {
     display: grid;
     align-items: center;
-    padding: 4rem;
+    padding: 0; /* No padding to avoid clipping */
     min-height: 100vh;
     background: linear-gradient(#eff0f3, #efe0e3);
     position: relative; /* Ensure absolute positioning works */
@@ -42,7 +42,7 @@ main {
     height: 100vh; /* 100% of the viewport height */
     border: none;
     z-index: 1;
-    object-fit: contain; /* Ensure the design covers the entire area without distortion */
+    object-fit: cover; /* Ensure the design covers the entire area without distortion */
 }
 
 

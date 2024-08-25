@@ -255,12 +255,11 @@ main {
 /* Media Query for screens smaller than 480px (very small phones) */
 @media (max-width: 480px) {
     #typing-text {
-        font-size: 10vw; /* Further reduce font size */
+        font-size: 5vw; /* Further reduce font size */
     }
 
     .form-container {
         bottom: 30%; /* Move the form up */
-        left: 5%; /* Adjust positioning */
         width: 95%; /* Increase width to fit smaller screens */
     }
 
@@ -269,7 +268,7 @@ main {
     }
 
     #subtext {
-        font-size: .5em; /* Increase font size to make text more readable */
+        font-size: 3em; /* Increase font size to make text more readable */
     }
 }
 

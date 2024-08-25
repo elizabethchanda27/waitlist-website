@@ -23,7 +23,7 @@ main {
     padding: 4rem;
     min-height: 100vh;
     background: linear-gradient(#eff0f3, #efe0e3);
-    position: relative; /* Ensure absolute positioning works */
+    position: relative;
 }
 
 /* Container for aligning elements */
@@ -38,8 +38,10 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    min-width: 1024px;
+    min-height: 768px;
     border: none;
     z-index: 1;
 }
@@ -54,16 +56,16 @@ main {
     opacity: 0;
     z-index: 2;
     transition: opacity 0.5s ease-in-out;
-    max-width: 80%; /* Adjust to ensure proper scaling */
+    max-width: 80%;
     transform: translateY(-50%);
 }
 
 /* Typing Text */
 #typing-text {
-    font-size: 5em;
+    font-size: 3vw;
     font-weight: bold;
-    white-space: nowrap; /* Ensure text stays on one line */
-    border-right: 2px solid black; /* Cursor effect */
+    white-space: nowrap;
+    border-right: 2px solid black;
     padding-right: 10px;
     animation: blink-caret 0.75s step-end infinite;
     display: inline-block;
@@ -74,15 +76,15 @@ main {
     font-size: 1.5em;
     color: #666;
     margin-top: 0.5em;
-    text-align: left; /* Align with the typing text */
-    white-space: nowrap; /* Prevent text wrapping */
+    text-align: left;
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    text-overflow: ellipsis;
 }
 
 /* Spacer */
 #spacer {
-    height: 3rem; /* Space between subtext and form */
+    height: 3rem;
     width: 100%;
     background: transparent;
 }
@@ -115,14 +117,13 @@ main {
 /* Form Container */
 .form-container {
     position: absolute;
-    bottom: 50%; /* Move form container up from the bottom */
-    left: 7.5%; /* Align with the left of the page */
-    transform: translateX(0); /* No need to center, already aligned */
+    bottom: 50%;
+    left: 7.5%;
     z-index: 3;
     width: 80%;
     max-width: 800px;
-    opacity: 0; /* Initially hidden, revealed later by JavaScript */
-    background-color: rgba(255, 255, 255, 0.9); /* Visible background */
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.9);
     transition: opacity 0.5s ease-in-out;
     padding: 2rem;
     border-radius: 8px;
@@ -140,7 +141,7 @@ main {
     display: flex;
     gap: 1rem;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allows inputs to wrap if needed */
+    flex-wrap: wrap;
 }
 
 /* Input Fields */
@@ -150,7 +151,7 @@ main {
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
-    min-width: 150px; /* Ensure inputs don't get too small */
+    min-width: 150px;
 }
 
 /* Submit Button */
@@ -170,7 +171,7 @@ main {
 
 /* Styles for confirmation message */
 #confirmation-message {
-    display: none; /* Initially hidden */
+    display: none;
     font-size: 1.5rem;
     color: #28a745;
     margin-top: 1rem;
@@ -187,26 +188,53 @@ main {
     position: absolute;
     top: 10px;
     right: 20px;
-    z-index: 1000; /* Ensures it stays on top */
+    z-index: 1000;
     font-style: italic;
 }
 
-
-/* Additional Styles */
+/* Header Styles */
 h1 {
-    font-family: "Playfair Display";
+    font-family: "Playfair Display", serif;
     font-size: 4rem;
     margin-top: 3em;
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+/* Paragraph Styles */
 p {
     font-size: 1.6rem;
     font-weight: 300;
     margin: 0;
-}
-
-h1, p {
     text-align: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #typing-container {
+        top: 10%;
+        left: 5%;
+        font-size: 2.5vw;
+    }
+
+    .form-container {
+        bottom: 20%;
+        left: 5%;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 2em;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    #typing-text {
+        font-size: 2.5vw;
+    }
 }

@@ -271,7 +271,7 @@ main {
         height: 100vh; /* Ensure full height coverage */
         transform: scale(1); /* Scale the image to 50% of its original size */
         width: 390vw;
-        left: -260vw;
+        left: -270vw;
     }
 
     #subtext {

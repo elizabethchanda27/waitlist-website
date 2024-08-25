@@ -224,7 +224,9 @@ main {
     .form-container {
         bottom: 10%; /* Move the form up */
         left: 5%; /* Adjust positioning */
-        width: 90%; /* Make the form container take up more space on smaller screens */
+        width: 70%; /* Make the form container take up more space on smaller screens */
+        height: 30vh; /* Make the form container 40% of the screen height on phone screens */
+        padding: 20px; /* Adjust the padding to make the form container more compact */
     }
 
     /* Stack input fields vertically on small screens */

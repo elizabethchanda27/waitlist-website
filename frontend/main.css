@@ -62,7 +62,7 @@ main {
 
 /* Typing Text */
 #typing-text {
-    font-size: 5vw; /* Responsive font size based on viewport width */
+    font-size: 5em; /* Responsive font size based on viewport width */
     font-weight: bold;
     white-space: nowrap; /* Ensure text stays on one line */
     border-right: 2px solid black; /* Cursor effect */
@@ -255,7 +255,7 @@ main {
 
     /* Adjust the form container position */
     .form-container {
-        bottom: 50%; /* Move the form up */
+        bottom: 30%; /* Move the form up */
     }
 }
 

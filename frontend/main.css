@@ -38,31 +38,31 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw; /* Ensure full viewport width */
-    height: 100vh; /* Ensure full viewport height */
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
     border: none;
     z-index: 1;
-    object-fit: cover; /* Ensure the design covers the entire area */
-    background: rgba(0, 0, 0, 0.5); /* Optional: Add a background color to enhance visibility */
+    object-fit: cover; /* Ensures the design covers the entire area without distortion */
 }
 
 /* Typing Effect Container */
 #typing-container {
     position: absolute;
-    top: 20%; /* Adjusted position */
-    left: 5%; /* Centered horizontally */
+    top: 20%;
+    left: 10%;
     text-align: left;
     color: #333;
     opacity: 0;
     z-index: 2;
     transition: opacity 0.5s ease-in-out;
-    max-width: 80%; /* Adjusted width */
+    max-width: 80%; /* Adjust to ensure proper scaling */
     transform: translateY(-50%);
+    font-size: 3vw; /* Adjust font size based on viewport width */
 }
 
 /* Typing Text */
 #typing-text {
-    font-size: 5em; /* Responsive font size based on viewport width */
+    font-size: 2em; /* Adjust font size */
     font-weight: bold;
     white-space: nowrap; /* Ensure text stays on one line */
     border-right: 2px solid black; /* Cursor effect */
@@ -73,9 +73,9 @@ main {
 
 /* Subtext */
 #subtext {
-    font-size: 2vw; /* Responsive font size based on viewport width */
+    font-size: 1.5em; /* Adjust font size */
     color: #666;
-    margin-top: 0.5rem;
+    margin-top: 0.5em;
     text-align: left; /* Align with the typing text */
     white-space: nowrap; /* Prevent text wrapping */
     overflow: hidden;
@@ -93,7 +93,7 @@ main {
 [data-typewriter] {
     font-family: system-ui;
     font-weight: bold;
-    font-size: 4vw; /* Responsive font size */
+    font-size: 4.5rem;
     color: #d9376e;
     height: 6rem;
     border-right: .8rem solid transparent;
@@ -118,7 +118,7 @@ main {
 .form-container {
     position: absolute;
     bottom: 50%; /* Move form container up from the bottom */
-    left: 5%; /* Align with the left of the page */
+    left: 7.5%; /* Align with the left of the page */
     transform: translateX(0); /* No need to center, already aligned */
     z-index: 3;
     width: 80%;
@@ -129,7 +129,6 @@ main {
     padding: 2rem;
     border-radius: 8px;
 }
-
 
 /* Form Style */
 .form-container form {
@@ -203,10 +202,10 @@ main {
 
     /* Adjust the typing effect container for smaller screens */
     #typing-container {
-        top: 10%; /* Move the text up for better visibility */
+        top: 15%; /* Move the text up for better visibility */
         left: 5%; /* Adjust left positioning */
         max-width: 90%; /* Allow more space on small screens */
-        font-size: 1.5em; /* Decrease font size */
+        font-size: 4vw; /* Increase font size for better readability */
     }
 
     /* Adjust the typing text font size for smaller screens */
@@ -222,9 +221,9 @@ main {
 
     /* Adjust the form container for small screens */
     .form-container {
-        bottom: 50%; /* Keep the original bottom placement */
-        left: 7.5%; /* Keep the original left alignment */
-        width: 80%; /* Maintain the width */
+        bottom: 100%; /* Move the form up */
+        left: 5%; /* Adjust positioning */
+        width: 90%; /* Make the form container take up more space on smaller screens */
     }
 
     /* Stack input fields vertically on small screens */
@@ -239,7 +238,7 @@ main {
 
     /* Adjust the iframe to be more suitable for mobile screens */
     #spline-design {
-        height: 300px; /* Reduce the height of the iframe */
+        height: 100vh; /* Ensure it still covers the full height */
     }
 
     /* Adjust the company logo size for smaller screens */
@@ -253,28 +252,27 @@ main {
     }
 }
 
+/* Media Query for screens smaller than 480px (very small phones) */
 @media (max-width: 480px) {
     #typing-text {
-        font-size: 2em; /* Further reduce font size */
+        font-size: 5vw; /* Further reduce font size */
     }
 
     .form-container {
-        bottom: 50%; /* Keep the original bottom placement */
-        left: 7.5%; /* Keep the original left alignment */
+        bottom: 10%; /* Move the form up */
     }
 
     #spline-design {
-        height: 200px; /* Further reduce the height of the iframe */
+        height: 100vh; /* Ensure full height coverage */
     }
 }
-
 
 /* Additional Styles */
 h1 {
     font-family: "Playfair Display";
     font-size: 4rem;
-    margin-top: 3rem;
-    margin-bottom: 0.3rem;
+    margin-top: 3em;
+    margin-bottom: .3em;
 }
 
 p {

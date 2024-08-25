@@ -279,7 +279,7 @@ main {
     }
 
     #confirmation-message {
-        font-size: 1.1rem !important; /* Reduce font size even further */
+        font-size: .9rem !important; /* Reduce font size even further */
         margin-top: 0.5rem; /* Reduce margin top to make it more compact */
     }
 }

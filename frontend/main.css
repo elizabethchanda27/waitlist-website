@@ -194,7 +194,7 @@ main {
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     /* Adjust the main container padding for small screens */
     main {
         padding: 2rem; /* Reduce padding to fit smaller screens */
@@ -253,7 +253,7 @@ main {
 }
 
 /* Media Query for screens smaller than 480px (very small phones) */
-@media (max-width: 700px) {
+@media (max-width: 480px) {
     #typing-text {
         font-size: 5vw; /* Further reduce font size */
     }

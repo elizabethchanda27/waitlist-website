@@ -271,6 +271,14 @@ main {
     #subtext {
         font-size: 1em; /* Increase font size to make text more readable */
     }
+
+    #confirmation-message {
+        display: none; /* Initially hidden */
+        font-size: .5rem;
+        color: #28a745;
+        margin-top: 1rem;
+        text-align: center;
+    }
 }
 
 /* Additional Styles */

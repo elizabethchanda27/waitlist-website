@@ -195,7 +195,7 @@ main {
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     /* Adjust the main container padding for small screens */
     main {
         padding: 2rem; /* Reduce padding to fit smaller screens */
@@ -254,7 +254,7 @@ main {
 }
 
 /* Media Query for screens smaller than 480px (very small phones) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     #typing-text {
         font-size: 5vw; /* Further reduce font size */
     }
@@ -267,7 +267,8 @@ main {
 
     #spline-design {
         width: 100vw;
-        height: 100vh; /* Ensure full height coverage */
+        height: 150vh; /* Ensure full height coverage */
+        transform-origin: center;
     }
 
     #subtext {

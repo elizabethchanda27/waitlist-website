@@ -240,7 +240,7 @@ main {
     #spline-design {
         height: 100vh; /* Ensure it still covers the full height */
         transform: scale(.8); /* Adjust scaling for tablets */
-        transform-origin: center;
+        transform-origin: right;
     }
 
     /* Adjust the company logo size for smaller screens */
@@ -269,7 +269,7 @@ main {
     #spline-design {
         height: 100vh; /* Ensure full height coverage */
         transform: scale(.5); /* Further adjust scaling for phones */
-        transform-origin: center;
+        transform-origin: right;
     }
 
     #subtext {

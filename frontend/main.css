@@ -260,11 +260,9 @@ main {
     }
 
     .form-container {
-        left: 2%;
         bottom: 45%; /* Move the form up */
-        width: 80%; /* Increase width to fit smaller screens */
-        height: 30vh; /* Make the form container 40% of the screen height on phone screens */
-        padding: 20px; /* Adjust the padding to make the form container more compact */
+        height: 20vh; /* Make the form container 40% of the screen height on phone screens */
+        padding: 10 px
     }
 
     #spline-design {
@@ -281,11 +279,8 @@ main {
     }
 
     #confirmation-message {
-        display: none; /* Initially hidden */
-        font-size: .2rem;
-        color: #28a745;
-        margin-top: 1rem;
-        text-align: center;
+        font-size: 0.15rem; /* Reduce font size even further */
+        margin-top: 0.5rem; /* Reduce margin top to make it more compact */
     }
 }
 

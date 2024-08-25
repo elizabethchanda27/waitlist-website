@@ -42,8 +42,9 @@ main {
     height: 100vh; /* 100% of the viewport height */
     border: none;
     z-index: 1;
-    object-fit: cover; /* Ensures the design covers the entire area without distortion */
+    object-fit: contain; /* Ensure the design covers the entire area without distortion */
 }
+
 
 /* Typing Effect Container */
 #typing-container {
@@ -73,13 +74,12 @@ main {
 
 /* Subtext */
 #subtext {
-    font-size: .5em; /* Adjust font size */
+    font-size: 1em; /* Adjust font size for smaller screens */
     color: #666;
     margin-top: 0.5em;
-    text-align: left; /* Align with the typing text */
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    text-align: left;
+    white-space: normal; /* Allow text to wrap to the next line */
+    overflow: visible; /* Ensure no hidden overflow */
 }
 
 /* Spacer */
@@ -259,11 +259,15 @@ main {
     }
 
     .form-container {
-        bottom: 10%; /* Move the form up */
+        bottom: 50%; /* Move the form up */
     }
 
     #spline-design {
         height: 100vh; /* Ensure full height coverage */
+    }
+
+    #subtext {
+        font-size: 1.5em; /* Increase font size to make text more readable */
     }
 }
 

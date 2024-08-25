@@ -194,7 +194,7 @@ main {
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     /* Adjust the main container padding for small screens */
     main {
         padding: 2rem; /* Reduce padding to fit smaller screens */
@@ -239,8 +239,6 @@ main {
     /* Adjust the iframe to be more suitable for mobile screens */
     #spline-design {
         height: 100vh; /* Ensure it still covers the full height */
-        transform: scale(.8); /* Adjust scaling for tablets */
-        transform-origin: right;
     }
 
     /* Adjust the company logo size for smaller screens */
@@ -255,7 +253,7 @@ main {
 }
 
 /* Media Query for screens smaller than 480px (very small phones) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     #typing-text {
         font-size: 5vw; /* Further reduce font size */
     }
@@ -268,8 +266,6 @@ main {
 
     #spline-design {
         height: 100vh; /* Ensure full height coverage */
-        transform: scale(.5); /* Further adjust scaling for phones */
-        transform-origin: right;
     }
 
     #subtext {

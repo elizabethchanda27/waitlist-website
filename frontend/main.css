@@ -265,8 +265,9 @@ main {
     }
 
     #spline-design {
-        height: 90vh; /* Ensure full height coverage */
-        transform: center;
+        width: 100vw;
+        height: 100vh; /* Ensure full height coverage */
+        transform-origin: center;
     }
 
     #subtext {

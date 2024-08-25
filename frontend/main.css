@@ -268,8 +268,7 @@ main {
 
     #spline-design {
         height: 100vh; /* Ensure full height coverage */
-        transform: scale(0.95); /* Further adjust scaling for phones */
-        transform-origin: top left;
+        transform: scale(1.0); /* Further adjust scaling for phones */
     }
 
     #subtext {

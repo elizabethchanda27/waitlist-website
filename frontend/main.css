@@ -270,7 +270,7 @@ main {
         object-position: 50% 50%; /* Center the image horizontally and vertically */
         height: 100vh; /* Ensure full height coverage */
         transform: scale(0.5); /* Scale the image to 50% of its original size */
-        max-width: 200vw;
+        max-width: 500vw;
     }
 
     #subtext {

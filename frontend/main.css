@@ -255,7 +255,7 @@ main {
 
     /* Adjust the form container position */
     .form-container {
-        bottom: 10%; /* Move the form up */
+        bottom: 20%; /* Move the form up */
     }
 }
 

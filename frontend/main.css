@@ -23,7 +23,7 @@ main {
     padding: 4rem;
     min-height: 100vh;
     background: linear-gradient(#eff0f3, #efe0e3);
-    position: relative;
+    position: relative; /* Ensure absolute positioning works */
 }
 
 /* Container for aligning elements */
@@ -38,12 +38,11 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    min-width: 1024px;
-    min-height: 768px;
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
     border: none;
     z-index: 1;
+    object-fit: cover; /* Ensures the design covers the entire area without distortion */
 }
 
 /* Typing Effect Container */
@@ -56,16 +55,16 @@ main {
     opacity: 0;
     z-index: 2;
     transition: opacity 0.5s ease-in-out;
-    max-width: 80%;
+    max-width: 80%; /* Adjust to ensure proper scaling */
     transform: translateY(-50%);
 }
 
 /* Typing Text */
 #typing-text {
-    font-size: 3vw;
+    font-size: 5rem; /* Fixed font size */
     font-weight: bold;
-    white-space: nowrap;
-    border-right: 2px solid black;
+    white-space: nowrap; /* Ensure text stays on one line */
+    border-right: 2px solid black; /* Cursor effect */
     padding-right: 10px;
     animation: blink-caret 0.75s step-end infinite;
     display: inline-block;
@@ -73,18 +72,18 @@ main {
 
 /* Subtext */
 #subtext {
-    font-size: 1.5em;
+    font-size: 1.5rem; /* Fixed font size */
     color: #666;
-    margin-top: 0.5em;
-    text-align: left;
-    white-space: nowrap;
+    margin-top: 0.5rem;
+    text-align: left; /* Align with the typing text */
+    white-space: nowrap; /* Prevent text wrapping */
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
 }
 
 /* Spacer */
 #spacer {
-    height: 3rem;
+    height: 3rem; /* Space between subtext and form */
     width: 100%;
     background: transparent;
 }
@@ -93,7 +92,7 @@ main {
 [data-typewriter] {
     font-family: system-ui;
     font-weight: bold;
-    font-size: 4.5rem;
+    font-size: 4.5rem; /* Fixed size for typewriter effect */
     color: #d9376e;
     height: 6rem;
     border-right: .8rem solid transparent;
@@ -117,13 +116,14 @@ main {
 /* Form Container */
 .form-container {
     position: absolute;
-    bottom: 50%;
-    left: 7.5%;
+    bottom: 50%; /* Move form container up from the bottom */
+    left: 7.5%; /* Align with the left of the page */
+    transform: translateX(0); /* No need to center, already aligned */
     z-index: 3;
     width: 80%;
     max-width: 800px;
-    opacity: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0; /* Initially hidden, revealed later by JavaScript */
+    background-color: rgba(255, 255, 255, 0.9); /* Visible background */
     transition: opacity 0.5s ease-in-out;
     padding: 2rem;
     border-radius: 8px;
@@ -141,7 +141,7 @@ main {
     display: flex;
     gap: 1rem;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows inputs to wrap if needed */
 }
 
 /* Input Fields */
@@ -151,7 +151,7 @@ main {
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
-    min-width: 150px;
+    min-width: 150px; /* Ensure inputs don't get too small */
 }
 
 /* Submit Button */
@@ -171,7 +171,7 @@ main {
 
 /* Styles for confirmation message */
 #confirmation-message {
-    display: none;
+    display: none; /* Initially hidden */
     font-size: 1.5rem;
     color: #28a745;
     margin-top: 1rem;
@@ -188,53 +188,91 @@ main {
     position: absolute;
     top: 10px;
     right: 20px;
-    z-index: 1000;
+    z-index: 1000; /* Ensures it stays on top */
     font-style: italic;
 }
 
-/* Header Styles */
-h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 4rem;
-    margin-top: 3em;
-    margin-bottom: 0.3em;
-    text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust the main container padding for small screens */
+    main {
+        padding: 2rem; /* Reduce padding to fit smaller screens */
+    }
+
+    /* Adjust the typing effect container for smaller screens */
+    #typing-container {
+        top: 20%; /* Maintain position */
+        left: 10%; /* Maintain position */
+        max-width: 80%; /* Maintain width */
+    }
+
+    /* Ensure the Spline design covers full viewport */
+    #spline-design {
+        width: 100vw; /* Ensure full width */
+        height: 100vh; /* Ensure full height */
+    }
+
+    /* Adjust the company logo size for smaller screens */
+    #company-logo {
+        font-size: 1.5em; /* Maintain appropriate size */
+    }
+
+    /* Adjust the form container for small screens */
+    .form-container {
+        bottom: 10%; /* Move the form up */
+        left: 5%; /* Adjust positioning */
+        width: 90%; /* Make the form container take up more space on smaller screens */
+    }
+
+    /* Stack input fields vertically on small screens */
+    .input-group {
+        flex-direction: column;
+        gap: 0.5rem; /* Reduce gap between inputs */
+    }
+
+    .input-group input {
+        width: 100%; /* Make inputs full-width on smaller screens */
+    }
+
+    /* Adjust the spacer for smaller screens */
+    #spacer {
+        height: 1.5rem; /* Reduce height */
+    }
 }
 
-/* Paragraph Styles */
+@media (max-width: 480px) {
+    /* Keep the same title size */
+    #typing-text {
+        font-size: 5rem; /* Maintain size */
+    }
+
+    /* Ensure the Spline design covers full viewport */
+    #spline-design {
+        width: 100vw; /* Ensure full width */
+        height: 100vh; /* Ensure full height */
+    }
+
+    /* Adjust the form container position */
+    .form-container {
+        bottom: 10%; /* Move the form up */
+    }
+}
+
+/* Additional Styles */
+h1 {
+    font-family: "Playfair Display";
+    font-size: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 0.3rem;
+}
+
 p {
     font-size: 1.6rem;
     font-weight: 300;
     margin: 0;
-    text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    #typing-container {
-        top: 10%;
-        left: 5%;
-        font-size: 2.5vw;
-    }
-
-    .form-container {
-        bottom: 20%;
-        left: 5%;
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-        margin-top: 2em;
-    }
-
-    p {
-        font-size: 1.2rem;
-    }
-
-    #typing-text {
-        font-size: 2.5vw;
-    }
+h1, p {
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }

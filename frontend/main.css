@@ -23,7 +23,7 @@ main {
     padding: 4rem;
     min-height: 100vh;
     background: linear-gradient(#eff0f3, #efe0e3);
-    position: relative; /* Ensure absolute positioning works */
+    position: relative; 
 }
 
 /* Container for aligning elements */
@@ -38,11 +38,11 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw; /* 100% of the viewport width */
-    height: 100vh; /* 100% of the viewport height */
+    width: 100vw; 
+    height: 100vh;
     border: none;
     z-index: 1;
-    object-fit: contain; /* Ensure the design covers the entire area without distortion */
+    object-fit: contain; 
     object-position: center; /* Center the image horizontally and vertically */
 }
 
@@ -57,17 +57,17 @@ main {
     opacity: 0;
     z-index: 2;
     transition: opacity 0.5s ease-in-out;
-    max-width: 80%; /* Adjust to ensure proper scaling */
+    max-width: 80%; 
     transform: translateY(-50%);
-    font-size: 3vw; /* Adjust font size based on viewport width */
+    font-size: 3vw; 
 }
 
 /* Typing Text */
 #typing-text {
-    font-size: 1.5em; /* Adjust font size */
+    font-size: 1.5em; 
     font-weight: bold;
-    white-space: nowrap; /* Ensure text stays on one line */
-    border-right: 2px solid black; /* Cursor effect */
+    white-space: nowrap; 
+    border-right: 2px solid black; 
     padding-right: 10px;
     animation: blink-caret 0.75s step-end infinite;
     display: inline-block;
@@ -81,7 +81,7 @@ main {
     margin-bottom: 15px;
     text-align: left;
     white-space: normal; /* Allow text to wrap to the next line */
-    overflow: visible; /* Ensure no hidden overflow */
+    overflow: visible; 
 
 }
 
@@ -155,7 +155,7 @@ main {
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
-    min-width: 150px; /* Ensure inputs don't get too small */
+    min-width: 150px; 
 }
 
 /* Submit Button */
@@ -192,7 +192,7 @@ main {
     position: absolute;
     top: 10px;
     right: 20px;
-    z-index: 1000; /* Ensures it stays on top */
+    z-index: 1000; 
     font-style: italic;
 }
 
@@ -205,7 +205,7 @@ main {
 
     /* Adjust the typing effect container for smaller screens */
     #typing-container {
-        top: 15%; /* Move the text up for better visibility */
+        top: -30%; /* Move the text up for better visibility */
         left: 5%; /* Adjust left positioning */
         max-width: 90%; /* Allow more space on small screens */
         font-size: 4vw; /* Increase font size for better readability */
@@ -241,7 +241,7 @@ main {
 
     /* Adjust the iframe to be more suitable for mobile screens */
     #spline-design {
-        height: 100vh; /* Ensure it still covers the full height */
+        height: 100vh; 
     }
 
     /* Adjust the company logo size for smaller screens */
@@ -261,17 +261,25 @@ main {
         font-size: 6vw; /* Further reduce font size */
     }
 
+    /* Adjust the typing effect container for smaller screens */
+    #typing-container {
+        top: -30%; /* Move the text up for better visibility */
+        left: 5%; /* Adjust left positioning */
+        max-width: 90%; /* Allow more space on small screens */
+        font-size: 4vw; /* Increase font size for better readability */
+    }
+
     .form-container {
         bottom: 55%; /* Move the form up */
-        height: 20vh; /* Make the form container 40% of the screen height on phone screens */
+        height: 20vh; 
         padding: 10px
     }
 
     #spline-design {
         object-fit: contain;
         object-position: 50% 50%; /* Center the image horizontally and vertically */
-        height: 100vh; /* Ensure full height coverage */
-        transform: scale(1); /* Scale the image to 50% of its original size */
+        height: 100vh; 
+        transform: scale(1); 
         width: 390vw;
         left: -270vw;
     }
@@ -283,6 +291,360 @@ main {
     #confirmation-message {
         font-size: .9rem !important; /* Reduce font size even further */
         margin-top: 0.5rem; /* Reduce margin top to make it more compact */
+    }
+}
+
+/* Media Query for iPad screens (768px x 1024px) */
+@media (max-width: 768px) and (min-height: 1024px) {
+    #typing-text {
+        font-size: 5.5vw; /* Adjust font size for better readability */
+    }
+
+    #typing-container {
+        top: -20%; /* Move the text up */
+        left: 2%; /* Adjust left positioning */
+        max-width: 80%; /* Adjust width for the iPad screen */
+        font-size: 3vw; /* Adjust font size */
+    }
+
+    .form-container {
+        bottom: 50%; /* Adjust the form positioning */
+        height: 25vh; 
+        padding: 15px;
+    }
+
+    #spline-design {
+        object-fit: contain;
+        object-position: 50% 50%; /* Center the image */
+        height: 100vh; 
+        transform: scale(1); 
+        width: 150vw;
+        left: -40vw;
+    }
+
+    #subtext {
+        font-size: 1.2em; /* Adjust font size */
+    }
+
+    #confirmation-message {
+        font-size: 1rem !important; /* Adjust font size */
+        margin-top: 1rem; /* Adjust margin */
+    }
+}
+
+/* Media Query for Nest Hub screens (1024px x 600px) */
+@media (max-width: 1024px) and (min-height: 600px) {
+    #typing-text {
+        font-size: 5vw; /* Adjust font size */
+    }
+
+    #typing-container {
+        top: -10%; /* Adjust top positioning */
+        left: 1%; /* Adjust left positioning */
+        max-width: 90%; /* Adjust width for the Nest Hub */
+        font-size: 3.5vw; /* Adjust font size */
+    }
+
+    .form-container {
+        bottom: 45%; /* Adjust the form positioning */
+        height: 30vh; 
+        padding: 10px;
+    }
+
+    #spline-design {
+        object-fit: contain;
+        object-position: 50% 50%; /* Center the image */
+        height: 100vh; 
+        transform: scale(1); 
+        width: 120vw;
+        left: -10vw;
+    }
+
+    #subtext {
+        font-size: 1.1em; /* Adjust font size */
+    }
+
+    #confirmation-message {
+        font-size: .95rem !important; /* Adjust font size */
+        margin-top: 0.75rem; /* Adjust margin */
+    }
+}
+
+/* Media Query for BlackBerry PlayBook screens (600px x 1024px) */
+@media (max-width: 600px) and (min-height: 1024px) {
+    #typing-text {
+        font-size: 5.5vw; /* Adjust font size */
+    }
+
+    #typing-container {
+        top: -25%; /* Adjust top positioning */
+        left: 3%; /* Adjust left positioning */
+        max-width: 85%; /* Adjust width for the PlayBook */
+        font-size: 3.2vw; /* Adjust font size */
+    }
+
+    .form-container {
+        bottom: 50%; /* Adjust the form positioning */
+        height: 22vh; 
+        padding: 12px;
+    }
+
+    #spline-design {
+        object-fit: contain;
+        object-position: 50% 50%; /* Center the image */
+        height: 100vh; 
+        transform: scale(1); 
+        width: 140vw;
+        left: -25vw;
+    }
+
+    #subtext {
+        font-size: 1.15em; /* Adjust font size */
+    }
+
+    #confirmation-message {
+        font-size: .95rem !important; /* Adjust font size */
+        margin-top: 0.75rem; /* Adjust margin */
+    }
+}
+
+/* Media Query for iPad Pro screens (1024px x 1366px) */
+@media (max-width: 1024px) and (min-height: 1366px) {
+    #typing-text {
+        font-size: 6vw; /* Adjust font size for better readability */
+    }
+
+    #typing-container {
+        top: -15%; /* Adjust top positioning */
+        left: 2%; /* Adjust left positioning */
+        max-width: 80%; /* Adjust width for the iPad Pro screen */
+        font-size: 3vw; /* Adjust font size */
+    }
+
+    .form-container {
+        bottom: 45%; /* Adjust the form positioning */
+        height: 25vh; 
+        padding: 15px;
+    }
+
+    #spline-design {
+        object-fit: contain;
+        object-position: 50% 50%; /* Center the image */
+        height: 100vh; 
+        transform: scale(1); 
+        width: 140vw;
+        left: -20vw;
+    }
+
+    #subtext {
+        font-size: 2em; /* Adjust font size */
+    }
+
+    #confirmation-message {
+        font-size: 1rem !important; /* Adjust font size */
+        margin-top: 1rem; /* Adjust margin */
+    }
+}
+
+/* Media Query for iPad Air screens (820px x 1180px) */
+@media (max-width: 820px) and (min-height: 1180px) {
+    #typing-text {
+        font-size: 5vw; /* Adjust font size for better readability */
+    }
+
+    #typing-container {
+        top: -20%; /* Adjust top positioning */
+        left: 2%; /* Adjust left positioning */
+        max-width: 85%; /* Adjust width for the iPad Air screen */
+        font-size: 3.5vw; /* Adjust font size */
+    }
+
+    .form-container {
+        bottom: 50%; /* Adjust the form positioning */
+        height: 22vh; 
+        padding: 12px;
+    }
+
+    #spline-design {
+        object-fit: contain;
+        object-position: 50% 50%; /* Center the image */
+        height: 100vh; 
+        transform: scale(1); 
+        width: 120vw;
+        left: -10vw;
+    }
+
+    #subtext {
+        font-size: 1.5em; /* Adjust font size */
+    }
+
+    #confirmation-message {
+        font-size: 0.95rem !important; /* Adjust font size */
+        margin-top: 0.8rem; /* Adjust margin */
+    }
+}
+
+/* Media Query for Asus Zenbook Fold screens (853px x 1280px) */
+@media (max-width: 853px) and (min-height: 1280px) {
+    #typing-text {
+        font-size: 6vw; /* Adjust font size for better readability */
+    }
+
+    #typing-container {
+        top: -25%; /* Adjust top positioning */
+        left: 2%; /* Adjust left positioning */
+        max-width: 85%; /* Adjust width for the Zenbook Fold screen */
+        font-size: 3.8vw; /* Adjust font size */
+    }
+
+    .form-container {
+        bottom: 52%; /* Adjust the form positioning */
+        height: 21vh; 
+        padding: 14px;
+    }
+
+    #spline-design {
+        object-fit: contain;
+        object-position: 50% 50%; /* Center the image */
+        height: 100vh; 
+        transform: scale(1); 
+        width: 110vw;
+        left: -5vw;
+    }
+
+    #subtext {
+        font-size: 1.5em; /* Adjust font size */
+    }
+
+    #confirmation-message {
+        font-size: 0.93rem !important; /* Adjust font size */
+        margin-top: 0.7rem; /* Adjust margin */
+    }
+}
+
+/* Media Query for Galaxy S5 screens (360px x 640px) */
+@media (max-width: 360px) and (min-height: 640px) {
+    #typing-text {
+        font-size: 6vw; /* Adjust font size for small screen */
+    }
+
+    #typing-container {
+        top: -15%; /* Adjust top positioning */
+        left: 2%; /* Adjust left positioning */
+        max-width: 90%; /* Adjust width for the small screen */
+        font-size: 4.5vw; /* Adjust font size for readability */
+    }
+
+    .form-container {
+        bottom: 65%; /* Adjust the form positioning */
+        height: 18vh; 
+        padding: 8px;
+    }
+
+    #spline-design {
+        object-fit: contain;
+        object-position: 50% 50%; /* Center the image */
+        height: 100vh; 
+        transform: scale(1); 
+        width: 380vw;
+        left: -260vw;
+    }
+
+    #subtext {
+        font-size: 0.9em; /* Adjust font size */
+    }
+
+    #confirmation-message {
+        font-size: 0.85rem !important; /* Adjust font size */
+        margin-top: 0.4rem; /* Adjust margin */
+    }
+}
+
+/* Media Query for iPhone 6/7/8 screens (375px x 667px) */
+@media (max-width: 375px) and (min-height: 667px) {
+    #typing-text {
+        font-size: 6.5vw; /* Adjust font size for readability */
+    }
+
+    #typing-container {
+        top: -10%; /* Adjust top positioning */
+        left: 3%; /* Adjust left positioning */
+        max-width: 90%; /* Adjust width for the screen */
+        font-size: 4.2vw; /* Adjust font size */
+    }
+
+    .form-container {
+        bottom: 65%; /* Adjust the form positioning */
+        height: 18vh; 
+        padding: 10px;
+    }
+
+    #spline-design {
+        object-fit: contain;
+        object-position: 50% 50%; /* Center the image */
+        height: 100vh; 
+        transform: scale(1); 
+        width: 390vw;
+        left: -265vw;
+    }
+
+    #subtext {
+        font-size: 1em; /* Adjust font size */
+    }
+
+    #confirmation-message {
+        font-size: 0.9rem !important; /* Adjust font size */
+        margin-top: 0.5rem; /* Adjust margin */
+    }
+}
+
+/* Media Query for iPhone 6/7/8 Plus screens (414px x 736px) */
+@media (max-width: 414px) and (min-height: 736px) {
+    #typing-text {
+        font-size: 6vw; /* Adjust font size for readability */
+    }
+
+    #typing-container {
+        top: -23%; /* Adjust top positioning */
+        left: 3%; /* Adjust left positioning */
+        max-width: 90%; /* Adjust width for the screen */
+        font-size: 4vw; /* Adjust font size */
+    }
+
+    .form-container {
+        bottom: 60%; /* Adjust the form positioning */
+        height: 20vh; 
+        padding: 12px;
+    }
+
+    #spline-design {
+        object-fit: contain;
+        object-position: 50% 50%; /* Center the image */
+        height: 100vh; 
+        transform: scale(1); 
+        width: 390vw;
+        left: -270vw;
+    }
+
+    #subtext {
+        font-size: 1.1em; /* Adjust font size */
+    }
+
+    #confirmation-message {
+        font-size: 1rem !important; /* Adjust font size */
+        margin-top: 0.6rem; /* Adjust margin */
+    }
+}
+
+/* Media Query for iPad Pro screens (1024px x 1366px) */
+@media (max-width: 1024px) and (min-height: 1366px) {
+    #spline-design {
+        object-fit: contain;
+        object-position: 50% 50%; /* Center the image */
+        height: 100vh; 
+        transform: scale(1.1); 
+        width: 100vw; /* Adjust width */
+        left: 0; /* Align to the left */
     }
 }
 

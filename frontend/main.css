@@ -50,8 +50,8 @@ main {
 /* Typing Effect Container */
 #typing-container {
     position: absolute;
-    top: 20%;
-    left: 8%;
+    top: -30%;
+    left: 4%;
     text-align: left;
     color: #333;
     opacity: 0;

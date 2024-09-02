@@ -20,7 +20,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 function typeText() {
-    const texts = ["Time Saving", "Your own personal assistant", "Innovative", "Make Every Minute Count with AI.", "Meet SynthoTime SmartPilot"];
+    const texts = ["Time Saving.", "Your own personal assistant.", "Innovation with AI.", "Make Every Minute Count.", "Meet SynthoTime SmartPilot"];
     let index = 0;
     let typingSpeed = 100; // Speed of typing in milliseconds
     let deletingSpeed = 50; // Speed of deleting in milliseconds
@@ -60,34 +60,18 @@ function typeText() {
     typeNextText(); // Start the typing animation
 }
 
-// Initialize the typing effect after the Spline design is finished
-function onSplineLoad() {
-    setTimeout(() => {
-        document.getElementById('typing-container').style.opacity = 1; // Show the title
-        typeText(); // Start the typing animation
-        document.querySelector('.form-container').style.opacity = 1; // Show the form container
-    }, 13500); // Adjust this delay to control when the title and form appear
+// Show the title and form immediately after the page loads
+function onPageLoad() {
+    document.getElementById('typing-container').style.opacity = 1; // Show the title
+    typeText(); // Start the typing animation
+    document.querySelector('.form-container').style.opacity = 1; // Show the form container
 }
 
 window.onload = function() {
-    onSplineLoad(); // Initialize after the Spline design is loaded
+    onPageLoad(); // Initialize when the page loads
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const typingText = "Productivity, ";
-    const typingContainer = document.getElementById("typing-text");
-    let index = 0;
-
-    function type() {
-        if (index < typingText.length) {
-            typingContainer.textContent += typingText.charAt(index);
-            index++;
-            setTimeout(type, 100); // Adjust typing speed here
-        }
-    }
-
-    type();
-
     const form = document.getElementById("waitlist-form");
     const confirmationMessage = document.getElementById("confirmation-message");
 
@@ -124,32 +108,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 origin: { y: 0.6 }
             });
 
-            // Function to retrieve and log data from Firestore
-            async function retrieveData() {
-                try {
-                    const snapshot = await getDocs(collection(db, 'submissions'));
-                    const submissionsList = [];
-                    snapshot.forEach((doc) => {
-                        submissionsList.push({
-                            id: doc.id,
-                            ...doc.data(),
-                        });
-                    });
-                    console.log('Submissions:', submissionsList);
-                } catch (error) {
-                    console.error('Error retrieving documents:', error);
-                }
-            }
-            
             // Clear the form fields after submission
             form.reset();
         } catch (error) {
             console.error('Error adding document: ', error);
         }
     });    
-
-    
 });
-
-
-

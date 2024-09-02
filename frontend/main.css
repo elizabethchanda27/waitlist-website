@@ -51,7 +51,7 @@ main {
 #typing-container {
     position: absolute;
     top: 20%;
-    left: 10%;
+    left: 8%;
     text-align: left;
     color: #333;
     opacity: 0;
@@ -75,12 +75,14 @@ main {
 
 /* Subtext */
 #subtext {
-    font-size: .5em; /* Adjust font size for smaller screens */
+    font-size: 1.5em; /* Adjust font size for smaller screens */
     color: #666;
-    margin-top: 0.5em;
+    margin-top: .5em;
+    margin-bottom: 15px;
     text-align: left;
     white-space: normal; /* Allow text to wrap to the next line */
     overflow: visible; /* Ensure no hidden overflow */
+
 }
 
 /* Spacer */
@@ -118,7 +120,7 @@ main {
 /* Form Container */
 .form-container {
     position: absolute;
-    bottom: 50%; /* Move form container up from the bottom */
+    bottom: 43%; /* Move form container up from the bottom */
     left: 8%; /* Align with the left of the page */
     transform: translateX(0); /* No need to center, already aligned */
     z-index: 3;
